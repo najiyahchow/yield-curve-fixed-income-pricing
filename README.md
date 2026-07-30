@@ -1,35 +1,33 @@
 # Yield Curve Construction and Fixed-Income Pricing
 
-This project explores how interest-rate data can be transformed into a yield
-curve and then used to price and analyse fixed-income instruments.
+This project investigates how the representation and interpolation of the
+yield curve affect the valuation and interest-rate risk of fixed-income
+instruments.
 
-The project is designed as a practical study of core fixed-income concepts,
-with an emphasis on transparent mathematics, simple Python implementations
-and clear interpretation of results.
+Two simple curve-construction approaches are implemented and compared:
+linear interpolation of continuously compounded zero rates and linear
+interpolation of discount factors. The resulting curves are used to price
+bonds and a plain-vanilla interest-rate swap and to calculate key risk
+measures.
 
-## Objectives
+## Research question
 
-- Calculate discount factors, zero rates and forward rates
-- Construct a simple yield curve
-- Price zero-coupon and fixed-coupon bonds
-- Calculate yield to maturity
-- Calculate duration, convexity and DV01
-- Calculate the par rate of a vanilla interest-rate swap
-- Analyse the effect of yield-curve shifts on bond and swap values
+How materially does the choice of yield-curve interpolation method affect
+instrument valuation and measured interest-rate sensitivity?
 
-## Scope
+## Project scope
 
-The project focuses on simplified fixed-income pricing from first principles.
+The project covers:
 
-It does not attempt to reproduce a production pricing library. Advanced topics
-such as multicurve modelling, stochastic interest-rate models, swaptions and
-complex market conventions are outside the current scope.
+- construction of discount, zero-rate and forward curves;
+- comparison of two interpolation methods;
+- pricing of zero-coupon and fixed-coupon bonds;
+- duration, convexity and DV01;
+- calculation of par swap rates;
+- valuation of a plain-vanilla interest-rate swap;
+- parallel and non-parallel yield-curve shocks.
 
-## Planned structure
-
-1. Discounting and interest-rate foundations
-2. Yield curve construction
-3. Bond pricing and risk measures
-4. Vanilla interest-rate swap pricing
-5. Scenario analysis
-6. Conclusions
+The implementation deliberately uses simplified assumptions so that the
+mathematics and numerical effects remain transparent. Production-level
+market conventions, multicurve frameworks and stochastic interest-rate
+models are outside the scope.
